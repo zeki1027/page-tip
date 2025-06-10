@@ -215,7 +215,11 @@
     }
     return '';
   };
-
+  const risk = getQueryString('risk')
+  if (risk === '40') {
+    document.getElementById('continueBtn').style.display = 'none';
+    document.body.style.backgroundColor = '#E34840';
+  }
   const hrefStr = getQueryString('href')
   const hostnameStr = getQueryString('hostname')
   const continueBtn = document.getElementById('continueBtn');
